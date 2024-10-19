@@ -37,6 +37,7 @@ UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
 UPDATE_PACKAGE "luci-app-wolplus" "VIKINGYFY/luci-app-wolplus" "main"
 
 UPDATE_PACKAGE "luci-app-adguardhome" "kongfl888/luci-app-adguardhome" "master"
+UPDATE_PACKAGE "luci-app-vlmcsd" "Wind4/vlmcsd-debian" "master"
 
 if [[ $WRT_REPO != *"immortalwrt"* ]]; then
 	UPDATE_PACKAGE "qmi-wwan" "immortalwrt/wwan-packages" "master" "pkg"
