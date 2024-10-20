@@ -38,9 +38,16 @@ UPDATE_PACKAGE "luci-app-wolplus" "VIKINGYFY/luci-app-wolplus" "main"
 
 UPDATE_PACKAGE "luci-app-adguardhome" "kongfl888/luci-app-adguardhome" "master"
 UPDATE_PACKAGE "luci-app-vlmcsd" "Wind4/vlmcsd-debian" "master"
+UPDATE_PACKAGE "v2ray-geodata" "sbwml/v2ray-geodata" "master"
 
 if [[ $WRT_REPO != *"immortalwrt"* ]]; then
 	UPDATE_PACKAGE "qmi-wwan" "immortalwrt/wwan-packages" "master" "pkg"
+fi
+
+UPDATE_PACKAGE "alist" "sbwml/luci-app-alist" "main"
+UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5"
+if [[ $WRT_REPO == *"lede"* ]]; then
+	UPDATE_PACKAGE "passwall_packages" "xiaorouji/openwrt-passwall-packages" "main"
 fi
 
 #更新软件包版本
