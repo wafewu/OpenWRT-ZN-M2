@@ -37,7 +37,7 @@ UPDATE_PACKAGE "luci-app-gecoosac" "lwb1978/openwrt-gecoosac" "main"
 UPDATE_PACKAGE "luci-app-wolplus" "VIKINGYFY/luci-app-wolplus" "main"
 
 UPDATE_PACKAGE "luci-app-adguardhome" "kongfl888/luci-app-adguardhome" "master"
-UPDATE_PACKAGE "luci-app-vlmcsd" "ActiveIce/vlmcsd" "master"
+UPDATE_PACKAGE "vlmcsd" "ActiveIce/vlmcsd" "master"
 UPDATE_PACKAGE "v2ray-geodata" "sbwml/v2ray-geodata" "master"
 
 if [[ $WRT_REPO != *"immortalwrt"* ]]; then
