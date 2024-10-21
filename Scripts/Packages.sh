@@ -44,7 +44,6 @@ if [[ $WRT_REPO != *"immortalwrt"* ]]; then
 	UPDATE_PACKAGE "qmi-wwan" "immortalwrt/wwan-packages" "master" "pkg"
 fi
 
-rm -rf feeds/packages/net/mosdns
 UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5"
 if [[ $WRT_REPO == *"lede"* ]]; then
 	UPDATE_PACKAGE "passwall_packages" "xiaorouji/openwrt-passwall-packages" "main"
