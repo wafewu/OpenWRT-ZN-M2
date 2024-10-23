@@ -10,6 +10,10 @@ sed -i "s/(\(luciversion || ''\))/(\1) + (' \/ $WRT_CI-$WRT_DATE')/g" $(find ./f
 sed -i "s/\.ssid=.*/\.ssid=$WRT_WIFI/g" $(find ./package/kernel/mac80211/ ./package/network/config/ -type f -name "mac80211.*")
 
 #修改默认时区
+#sed -i "s/timezone='.*'/timezone='CST-8'/g" ./package/base-files/files/bin/config_generate
+#sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" ./package/base-files/files/bin/config_generate
+
+#修改默认时区
 sed -i "s/timezone='.*'/timezone='Asia\/Shanghai'/g" $CFG_FILE
 
 CFG_FILE="./package/base-files/files/bin/config_generate"
