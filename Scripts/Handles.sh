@@ -89,3 +89,22 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
 cd $PKG_PATCH && echo "golang update done!"
 # fi
+
+#预置adguardhome内核
+if [ -d *"adguardhome"* ]; then
+        AGH_CORE=$(curl -sL https://api.github.com/repos/AdguardTeam/AdGuardHome/releases/latest | grep /AdGuardHome_linux_${1} | awk -F '"' '{print $4}' | awk 'NR==3')
+	cd ./luci-app-adguardhome/root/
+        mkdir ./usr/bin/AdGuardHome
+	wget -qO- $AGH_CORE | tar xOvz > ./usr/bin/AdGuardHome/AdGuardHome
+        chmod +x ./usr/bin/AdGuardHome/AdGuardHome
+	cd $PKG_PATCH && echo "adguardhome core has been updated!"
+fi
+
+#预置lucky内核
+#if [ -d *"lucky"* ]; then
+#        LUCKY_CORE=$(curl -sL https://api.github.com/repos/gdy666/lucky/releases/latest | grep _Linux_arm64${1} | grep /lucky_${1} | awk -F '"' '{print $4}' | awk 'NR==1')
+#	cd ./luci-app-lucky/root/
+#	wget -qO- $LUCKY_CORE | tar xOvz --wildcards 'lucky' > ./usr/bin/lucky
+#        chmod +x ./usr/bin/lucky
+#	cd $PKG_PATCH && echo "lucky core has been updated!"
+#fi
