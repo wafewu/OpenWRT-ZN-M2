@@ -41,6 +41,7 @@ UPDATE_PACKAGE "v2ray-geodata" "sbwml/v2ray-geodata" "master"
 UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5"
 UPDATE_PACKAGE "homeproxy" "bulianglin/homeproxy" "master"
 UPDATE_PACKAGE "edge" "kiddin9/luci-theme-edge" "master"
+UPDATE_PACKAGE "vlmcsd" "Wind4/vlmcsd" "master"
 
 if [[ $WRT_REPO != *"immortalwrt"* ]]; then
 	UPDATE_PACKAGE "qmi-wwan" "immortalwrt/wwan-packages" "master" "pkg"
