@@ -22,6 +22,11 @@ sed -i "s/192\.168\.[0-9]*\.[0-9]*/$WRT_IP/g" $CFG_FILE
 #修改默认主机名
 sed -i "s/hostname='.*'/hostname='$WRT_NAME'/g" $CFG_FILE
 
+sed -i 's/0.openwrt.pool.ntp.org/ntp1.aliyun.com/g' ./package/base-files/files/bin/config_generate
+sed -i 's/1.openwrt.pool.ntp.org/ntp2.aliyun.com/g' ./package/base-files/files/bin/config_generate
+sed -i 's/2.openwrt.pool.ntp.org/time1.cloud.tencent.com/g' ./package/base-files/files/bin/config_generate
+sed -i 's/3.openwrt.pool.ntp.org/time2.cloud.tencent.com/g' ./package/base-files/files/bin/config_generate
+
 #配置文件修改
 echo "CONFIG_PACKAGE_luci=y" >> ./.config
 echo "CONFIG_LUCI_LANG_zh_Hans=y" >> ./.config
