@@ -32,6 +32,12 @@ echo "CONFIG_PACKAGE_luci=y" >> ./.config
 echo "CONFIG_LUCI_LANG_zh_Hans=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-theme-$WRT_THEME=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-app-$WRT_THEME-config=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-app-arpbind=y"  >> ./.config
+echo "CONFIG_PACKAGE_luci-i18n-arpbind-zh-cn=y"  >> ./.config
+echo "CONFIG_PACKAGE_cpufreq=y"  >> ./.config
+echo "CONFIG_PACKAGE_luci-i18n-cpufreq-zh-cn=y"  >> ./.config
+echo "CONFIG_PACKAGE_luci-app-timecontrol=y"  >> ./.config
+echo "CONFIG_PACKAGE_luci-i18n-timecontrol-zh-cn=y"  >> ./.config
 
 #手动调整的插件
 if [ -n "$WRT_PACKAGE" ]; then
